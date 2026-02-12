@@ -90,9 +90,6 @@ class _PhoneInputScreenState extends State<PhoneInputScreen> {
                     },
                     text: "Next",
                   ),
-                  SizedBox(height: 24),
-
-                  Text("Resend confirmation code (1:23)"),
                 ],
               ),
             ),

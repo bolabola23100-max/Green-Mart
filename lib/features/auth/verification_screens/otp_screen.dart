@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:green_mart/core/theme/colors.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
@@ -13,6 +15,31 @@ class OtpScreen extends StatefulWidget {
 class _OtpScreenState extends State<OtpScreen> {
   final formKey = GlobalKey<FormState>();
   final pinController = TextEditingController();
+  ///////////////////////
+  
+  Timer? _timer;
+  void startTimeDown() {
+    _timer?.cancel();
+    setState(() {
+      _remainingTime = 60;
+    });
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_remainingTime > 0) {
+        setState(() {
+          _remainingTime--;
+        });
+      } else {
+        timer.cancel();
+      }
+    });
+  }
+
+  int _remainingTime = 60;
+  @override
+  void initState() {
+    super.initState();
+    startTimeDown();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,12 +110,14 @@ class _OtpScreenState extends State<OtpScreen> {
                       Align(
                         alignment: AlignmentGeometry.topRight,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: _remainingTime == 0 ? startTimeDown : null,
                           child: Text(
                             "Resend OTP",
                             style: TextStyle(
                               fontSize: 14,
-                              color: AppColors.tangoColor,
+                              color: _remainingTime == 0
+                                  ? AppColors.tangoColor
+                                  : Colors.grey,
                             ),
                           ),
                         ),
@@ -113,6 +142,15 @@ class _OtpScreenState extends State<OtpScreen> {
                   SizedBox(height: 27),
 
                   MainButton(onPressed: () {}, text: "Confirm"),
+                  SizedBox(height: 24),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Resend confirmation code"),
+                      Text("($_remainingTime)"),
+                    ],
+                  ),
                 ],
               ),
             ),
