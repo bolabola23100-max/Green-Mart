@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:green_mart/core/constants/app_images.dart';
 import 'package:green_mart/core/functions/validation.dart';
 import 'package:green_mart/core/theme/colors.dart';
 import 'package:green_mart/core/widgets/inputs/custom_text_form_field.dart';
@@ -28,7 +29,7 @@ class _LoginState extends State<Login> {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Column(
                 children: [
-                  SvgPicture.asset("assets/Images/OrangeCarrot.svg"),
+                  SvgPicture.asset(AppImages.orangeCarrot),
                   SizedBox(height: 40),
                   Padding(
                     padding: const EdgeInsets.only(left: 24),
