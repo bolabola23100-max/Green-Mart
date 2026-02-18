@@ -2,7 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:green_mart/app/ThemeData.dart';
-import 'package:green_mart/features/on_boarding_screens/screens/splash_screen.dart';
+import 'package:green_mart/features/main_layout/main_layout.dart';
+// import 'package:green_mart/features/on_boarding_screens/screens/splash_screen.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -13,6 +14,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       theme: themeData(),
+
       builder: (context, child) {
         return SafeArea(
           top: false,
@@ -20,8 +22,8 @@ class MainApp extends StatelessWidget {
           child: child ?? Scaffold(),
         );
       },
-
-      home: SplashScreen(),
+      home: MainLayout(),
+      //   SplashScreen(),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:green_mart/core/constants/app_Images.dart';
-import 'package:green_mart/core/theme/colors.dart';
+import 'package:green_mart/core/functions/Navigations.dart';
+import 'package:green_mart/core/styles/colors.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
 import 'package:green_mart/features/auth/screens/login_screen.dart';
 
@@ -55,10 +56,7 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(height: 35),
                   MainButton(
                     onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => Login()),
-                      );
+                      pushReplacement(context, Login());
                     },
                     text: "Get Started",
                   ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:green_mart/core/constants/app_images.dart';
+import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/functions/validation.dart';
-import 'package:green_mart/core/theme/colors.dart';
+import 'package:green_mart/core/styles/colors.dart';
+import 'package:green_mart/core/styles/text_styles.dart'; //
 import 'package:green_mart/core/widgets/inputs/custom_text_form_field.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
 import 'package:green_mart/core/widgets/inputs/password_text_form_field.dart';
@@ -35,14 +37,7 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          fontSize: 22,
-                          color: AppColors.blackColor,
-                        ),
-                      ),
+                      child: Text("Login", style: TextStyles.title),
                     ),
                   ),
                   SizedBox(height: 16),
@@ -52,11 +47,7 @@ class _LoginState extends State<Login> {
                       alignment: AlignmentGeometry.topLeft,
                       child: Text(
                         "Enter your email and password",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
+                        style: TextStyles.subtitle,
                       ),
                     ),
                   ),
@@ -65,14 +56,7 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "Email",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
-                      ),
+                      child: Text("Email", style: TextStyles.subtitle),
                     ),
                   ),
                   CustomTextFormField(
@@ -93,14 +77,7 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "password",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
-                      ),
+                      child: Text("password", style: TextStyles.subtitle),
                     ),
                   ),
                   PasswordTextFormField(),
@@ -111,9 +88,8 @@ class _LoginState extends State<Login> {
                       onPressed: () {},
                       child: Text(
                         "Forgot Password?",
-                        style: TextStyle(
+                        style: TextStyles.caption.copyWith(
                           color: AppColors.primaryColor,
-                          fontSize: 13,
                         ),
                       ),
                     ),
@@ -129,11 +105,7 @@ class _LoginState extends State<Login> {
                       children: [
                         TextSpan(
                           text: "Don’t have an account? ",
-                          style: TextStyle(
-                            color: AppColors.blackColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style: TextStyles.caption.copyWith(fontSize: 15),
                         ),
                         WidgetSpan(
                           alignment: PlaceholderAlignment.middle,
@@ -143,19 +115,12 @@ class _LoginState extends State<Login> {
                               minimumSize: Size.zero,
                             ),
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => SignUp(),
-                                ),
-                              );
+                              pushReplacement(context, SignUp());
                             },
                             child: Text(
                               "Sing Up",
-                              style: TextStyle(
+                              style: TextStyles.caption.copyWith(
                                 color: AppColors.primaryColor,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
                               ),
                             ),
                           ),

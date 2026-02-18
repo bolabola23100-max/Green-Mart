@@ -22,3 +22,23 @@ flutter:
   assets:
     - assets/Images/
     - assets/svg/
+    - assets/Images/Vegetables/
+    - assets/Images/Fruits/
+    - assets/Images/FindProducts/
+    - assets/Images/oil/
+    - assets/Images/meat_fish/
+    - assets/Images/bread/
+    - assets/Images/dairy/
+    - assets/Images/beverages/
+    - assets/Images/account/
+fonts:
+  - family: Poppins
+    fonts: 
+      - assets: assets/fonts/Poppins-Regular.ttf
+        weight: 400
+      - assets: assets/fonts/Poppins-Medium.ttf
+        weight: 500
+      - assets: assets/fonts/Poppins-SemiBold.ttf
+        weight: 600
+      - assets: assets/fonts/Poppins-Bold.ttf
+        weight: 700

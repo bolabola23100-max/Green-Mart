@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:green_mart/core/constants/app_images.dart';
+import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/functions/validation.dart';
-import 'package:green_mart/core/theme/colors.dart';
+import 'package:green_mart/core/styles/colors.dart';
+import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/core/widgets/inputs/custom_text_form_field.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
 import 'package:green_mart/core/widgets/inputs/password_text_form_field.dart';
 import 'package:green_mart/features/auth/screens/login_screen.dart';
-import 'package:green_mart/features/auth/verification_screens/phone_input_screen.dart';
+import 'package:green_mart/features/auth/screens/verification_screens/phone_input_screen.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -37,14 +39,7 @@ class _SignUpState extends State<SignUp> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "Sign Up",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          fontSize: 22,
-                          color: AppColors.blackColor,
-                        ),
-                      ),
+                      child: Text("Sign Up", style: TextStyles.title),
                     ),
                   ),
                   SizedBox(height: 16),
@@ -54,11 +49,7 @@ class _SignUpState extends State<SignUp> {
                       alignment: AlignmentGeometry.topLeft,
                       child: Text(
                         "Enter your credentials to continue",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
+                        style: TextStyles.subtitle,
                       ),
                     ),
                   ),
@@ -68,14 +59,7 @@ class _SignUpState extends State<SignUp> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "Username",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
-                      ),
+                      child: Text("Username", style: TextStyles.subtitle),
                     ),
                   ),
                   CustomTextFormField(
@@ -95,14 +79,7 @@ class _SignUpState extends State<SignUp> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "Email",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
-                      ),
+                      child: Text("Email", style: TextStyles.subtitle),
                     ),
                   ),
                   CustomTextFormField(
@@ -124,14 +101,7 @@ class _SignUpState extends State<SignUp> {
                     padding: const EdgeInsets.only(left: 24),
                     child: Align(
                       alignment: AlignmentGeometry.topLeft,
-                      child: Text(
-                        "Password",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: AppColors.greyColor,
-                        ),
-                      ),
+                      child: Text("Password", style: TextStyles.subtitle),
                     ),
                   ),
                   PasswordTextFormField(),
@@ -140,12 +110,7 @@ class _SignUpState extends State<SignUp> {
                   MainButton(
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => PhoneInputScreen(),
-                          ),
-                        );
+                        pushTo(context, PhoneInputScreen());
                       }
                     },
                     text: "Sign Up",
@@ -155,11 +120,7 @@ class _SignUpState extends State<SignUp> {
                       children: [
                         TextSpan(
                           text: "Already have an account?",
-                          style: TextStyle(
-                            color: AppColors.blackColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style: TextStyles.caption.copyWith(fontSize: 15),
                         ),
                         WidgetSpan(
                           alignment: PlaceholderAlignment.middle,
@@ -169,19 +130,12 @@ class _SignUpState extends State<SignUp> {
                               minimumSize: Size.zero,
                             ),
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Login(),
-                                ),
-                              );
+                              pushReplacement(context, Login());
                             },
                             child: Text(
                               "Login",
-                              style: TextStyle(
+                              style: TextStyles.caption.copyWith(
                                 color: AppColors.primaryColor,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
                               ),
                             ),
                           ),
