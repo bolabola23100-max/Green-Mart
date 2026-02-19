@@ -18,4 +18,5 @@ class AppImages {
   static const String promoCordIcon = "assets/svg/PromoCordIcon.svg";
   static const String helpIcon = "assets/svg/helpIcon.svg";
   static const String paymentIcon = "assets/svg/Payment.svg";
+  static const String orderAccepted = "assets/svg/OrderAccepted.svg";
 }

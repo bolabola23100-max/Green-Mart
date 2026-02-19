@@ -31,12 +31,12 @@ class ExploreCart extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(child: Center(child: Image.asset(model.image!))),
+              Expanded(child: Center(child: Image.asset(model.image))),
               SizedBox(height: 20),
 
               Center(
                 child: Text(
-                  model.name!,
+                  model.name,
                   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
                 ),
               ),

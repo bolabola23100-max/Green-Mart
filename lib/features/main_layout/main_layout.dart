@@ -6,7 +6,7 @@ import 'package:green_mart/features/main_layout/views/account/account_screen.dar
 import 'package:green_mart/features/main_layout/views/cart/cart_screen.dart';
 import 'package:green_mart/features/main_layout/views/explore/explore_screen.dart';
 import 'package:green_mart/features/main_layout/views/favorites/favorites_screen.dart';
-import 'package:green_mart/features/main_layout/views/shop/home_screen.dart';
+import 'package:green_mart/features/main_layout/views/home/home_screen.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});

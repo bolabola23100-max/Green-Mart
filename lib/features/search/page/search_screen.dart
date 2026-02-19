@@ -42,6 +42,6 @@ class _SearchScreenState extends State<SearchScreen> {
 
 List<ProductModel> getProductsByName(String searchKey) {
   return allProducts.where((product) {
-    return product.name!.toLowerCase().contains(searchKey.toLowerCase());
+    return product.name.toLowerCase().contains(searchKey.toLowerCase());
   }).toList();
 }

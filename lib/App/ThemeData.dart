@@ -4,6 +4,7 @@ import 'package:green_mart/core/styles/colors.dart';
 
 ThemeData themeData() {
   return ThemeData(
+    dividerColor: Colors.transparent,
     fontFamily: AppFonts.poppins,
     scaffoldBackgroundColor: AppColors.backgroundColor,
     appBarTheme: AppBarTheme(
