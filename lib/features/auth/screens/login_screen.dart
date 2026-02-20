@@ -9,6 +9,7 @@ import 'package:green_mart/core/widgets/inputs/custom_text_form_field.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
 import 'package:green_mart/core/widgets/inputs/password_text_form_field.dart';
 import 'package:green_mart/features/auth/screens/signup_screen.dart';
+import 'package:green_mart/features/main_layout/main_layout.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -96,7 +97,9 @@ class _LoginState extends State<Login> {
                   ),
                   MainButton(
                     onPressed: () {
-                      if (formKey.currentState!.validate()) {}
+                      if (formKey.currentState!.validate()) {
+                        pushReplacement(context, MainLayout());
+                      }
                     },
                     text: "Log In",
                   ),

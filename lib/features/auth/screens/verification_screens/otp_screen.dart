@@ -64,7 +64,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       alignment: AlignmentGeometry.topLeft,
                       child: Text(
                         "Enter verification code",
-                        style: TextStyles.title
+                        style: TextStyles.title,
                       ),
                     ),
                   ),
