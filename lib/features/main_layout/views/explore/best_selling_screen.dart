@@ -15,23 +15,23 @@ class BestSellingScreen extends StatelessWidget {
           style: TextStyles.body1.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
-      body: Expanded(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
 
-                  crossAxisSpacing: 10,
-                  mainAxisExtent: 255,
-                ),
-                itemCount: bestSelling.length,
-                itemBuilder: (context, index) {
-                  var model = bestSelling[index];
-                  return ItemCart(model: model);
-                },
+                crossAxisSpacing: 10,
+                mainAxisExtent: 255,
               ),
+              itemCount: bestSelling.length,
+              itemBuilder: (context, index) {
+                var model = bestSelling[index];
+                return ItemCart(model: model);
+              },
             ),
           ],
         ),

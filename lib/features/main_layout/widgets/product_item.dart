@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:green_mart/core/constants/app_images.dart';
+import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/features/main_layout/data/product_model.dart';
+import 'package:green_mart/features/main_layout/views/details/product_details_screen.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({super.key, required this.model});
@@ -18,7 +20,10 @@ class ProductItem extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image.asset(model.image, height: 50),
+                Hero(
+                  tag: model.tagKey,
+                  child: Image.asset(model.image, height: 50),
+                ),
                 Text(
                   model.name,
                   style: TextStyles.subtitle.copyWith(fontSize: 12),
@@ -31,7 +36,9 @@ class ProductItem extends StatelessWidget {
 
                 Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    pushTo(context, ProductDetailsScreen(model: model));
+                  },
                   icon: SvgPicture.asset(AppImages.arrow),
                 ),
               ],

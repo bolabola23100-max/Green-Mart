@@ -8,10 +8,10 @@ class FavoritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Padding(
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
             padding: const EdgeInsets.only(top: 50),
             child: Column(
               children: [
@@ -20,30 +20,26 @@ class FavoritesScreen extends StatelessWidget {
                   style: TextStyles.title.copyWith(fontSize: 24),
                 ),
 
-                Expanded(
-                  child: SizedBox(
-                    height: double.infinity,
-                    child: GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1,
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1,
 
-                            crossAxisSpacing: 10,
-                            mainAxisExtent: 111,
-                          ),
-                      itemCount: favorite.length,
-                      itemBuilder: (context, index) {
-                        var model = favorite[index];
-                        return ProductItem(model: model);
-                      },
-                    ),
+                    crossAxisSpacing: 10,
+                    mainAxisExtent: 111,
                   ),
+                  itemCount: favorite.length,
+                  itemBuilder: (context, index) {
+                    var model = favorite[index];
+                    return ProductItem(model: model);
+                  },
                 ),
               ],
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

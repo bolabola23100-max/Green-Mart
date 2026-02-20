@@ -14,32 +14,34 @@ class ExploreScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 35),
-        child: Column(
-          spacing: 15,
-          children: [
-            Text(
-              "Find Products",
-              style: TextStyles.subtitle.copyWith(
-                fontSize: 18,
-                color: AppColors.blackColor,
-              ),
-            ),
-            Hero(
-              tag: "searchTag",
-              child: Material(
-                color: Colors.transparent,
-                child: CustomTextFormField(
-                  hintText: "Search Store",
-                  prefixIcon: Icon(Icons.search),
-                  readOnly: true,
-                  onTap: () {
-                    pushTo(context, SearchScreen());
-                  },
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: 15,
+            children: [
+              Text(
+                "Find Products",
+                style: TextStyles.subtitle.copyWith(
+                  fontSize: 18,
+                  color: AppColors.blackColor,
                 ),
               ),
-            ),
-            FindProducts(),
-          ],
+              Hero(
+                tag: "searchTag",
+                child: Material(
+                  color: Colors.transparent,
+                  child: CustomTextFormField(
+                    hintText: "Search Store",
+                    prefixIcon: Icon(Icons.search),
+                    readOnly: true,
+                    onTap: () {
+                      pushTo(context, SearchScreen());
+                    },
+                  ),
+                ),
+              ),
+              FindProducts(),
+            ],
+          ),
         ),
       ),
     );

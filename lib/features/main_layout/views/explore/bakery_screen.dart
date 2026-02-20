@@ -15,23 +15,23 @@ class BakeryScreen extends StatelessWidget {
           style: TextStyles.body1.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
-      body: Expanded(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
 
-                  crossAxisSpacing: 10,
-                  mainAxisExtent: 255,
-                ),
-                itemCount: breadProducts.length,
-                itemBuilder: (context, index) {
-                  var model = breadProducts[index];
-                  return ItemCart(model: model);
-                },
+                crossAxisSpacing: 10,
+                mainAxisExtent: 255,
               ),
+              itemCount: breadProducts.length,
+              itemBuilder: (context, index) {
+                var model = breadProducts[index];
+                return ItemCart(model: model);
+              },
             ),
           ],
         ),

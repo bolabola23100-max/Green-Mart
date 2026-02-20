@@ -15,23 +15,23 @@ class DairyScreen extends StatelessWidget {
           style: TextStyles.body1.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
-      body: Expanded(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-              
-                  crossAxisSpacing: 10,
-                  mainAxisExtent: 255,
-                ),
-                itemCount: dairyProducts.length,
-                itemBuilder: (context, index) {
-                  var model = dairyProducts[index];
-                  return ItemCart(model: model);
-                },
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+
+                crossAxisSpacing: 10,
+                mainAxisExtent: 255,
               ),
+              itemCount: dairyProducts.length,
+              itemBuilder: (context, index) {
+                var model = dairyProducts[index];
+                return ItemCart(model: model);
+              },
             ),
           ],
         ),
