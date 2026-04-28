@@ -33,9 +33,7 @@ class CustomTextFormField extends StatelessWidget {
         onTapOutside: (event) {
           FocusManager.instance.primaryFocus?.unfocus();
         },
-        decoration: InputDecoration(prefix: prefixIcon,
-        
-         hintText: hintText),
+        decoration: InputDecoration(prefixIcon: prefixIcon, hintText: hintText),
         validator: validator,
         onChanged: onChanged,
         onTap: onTap,
