@@ -1,92 +1,40 @@
 # 🟢 GreenMart App
 
-### Screens Overview
+Welcome to **GreenMart**, a fresh and innovative grocery application built with Flutter!
 
-## 🚀 Splash Screen
+## ✨ Features
+- **Seamless Authentication**: Login, Sign Up, and OTP Phone Verification flows.
+- **Beautiful UI**: An immersive and clean design to provide an excellent user experience.
+- **Smooth Navigation**: Easy browsing from the Welcome screen to shopping pages.
 
- - Displays the app logo and initializes the application.
+---
 
-<p align="center">
-  <img src="screenshots/SplashScreen.jpeg" width="45%" />
-</p>
+## 📱 App Screenshots
 
-## 👋 Welcome Screen
+### 🚀 Onboarding & Authentication
 
- - An immersive introductory interface designed to onboard users and set the tone for the GreenMart experience before heading into account management.
- 
-<p align="center">
-  <img src="screenshots/WelcomeScreen.jpeg" width="45%" />
-</p>
+| Splash Screen | Welcome Screen | Login |
+|:---:|:---:|:---:|
+| <img src="screenshots/SplashScreen.jpeg" width="250" /> | <img src="screenshots/WelcomeScreen.jpeg" width="250" /> | <img src="screenshots/login.jpeg" width="250" /> |
 
-## 🔐 Login Screen
- - Allows users to log into their accounts with form validation.
+| Sign Up | Phone Verification | OTP Verification |
+|:---:|:---:|:---:|
+| <img src="screenshots/signup.jpeg" width="250" /> | <img src="screenshots/PhoneVerificationScreen.jpeg" width="250" /> | <img src="screenshots/OTPVerificationScreen.jpeg" width="250" /> |
 
-<p align="center">
-  <img src="screenshots/login.jpeg" width="45%" />
-</p>
+### 🛍️ App Walkthrough
 
-## 📝 Sign Up Screen
+| | | |
+|:---:|:---:|:---:|
+| <img src="screenshots/screenshots(11).jpeg" width="250" /> | <img src="screenshots/screenshots(12).jpeg" width="250" /> | <img src="screenshots/screenshots(13).jpeg" width="250" /> |
+| <img src="screenshots/screenshots(14).jpeg" width="250" /> | <img src="screenshots/screenshots(15).jpeg" width="250" /> | <img src="screenshots/screenshots(16).jpeg" width="250" /> |
+| <img src="screenshots/screenshots(17).jpeg" width="250" /> | <img src="screenshots/screenshots(18).jpeg" width="250" /> | <img src="screenshots/screenshots(19).jpeg" width="250" /> |
+| <img src="screenshots/screenshots(20).jpeg" width="250" /> | <img src="screenshots/screenshots(21).jpeg" width="250" /> | <img src="screenshots/screenshots(22).jpeg" width="250" /> |
+| <img src="screenshots/screenshots(23).jpeg" width="250" /> | <img src="screenshots/screenshots(24).jpeg" width="250" /> | <img src="screenshots/screenshots(25).jpeg" width="250" /> |
+| <img src="screenshots/screenshots(26).jpeg" width="250" /> | <img src="screenshots/screenshots(27).jpeg" width="250" /> | |
 
- - Enables new users to create an account with input validation.
-
-<p align="center">
-  <img src="screenshots/signup.jpeg" width="45%" />
-</p>
-
-## 📞 Phone Verification Screen
-
- - Users enter their phone number for authentication.
-
-<p align="center">
-  <img src="screenshots/PhoneVerificationScreen.jpeg" width="45%" />
-</p>
-
-## 🔢 OTP Verification Screen
-
- - Users verify their identity by entering the OTP code.
-
-<p align="center">
-  <img src="screenshots/OTPVerificationScreen.jpeg" width="45%" />
-</p>
-##########################################
-<p align="center">
-  <img src="screenshots/screenshots(11).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(12).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(13).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(14).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(15).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(16).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(17).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(18).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(19).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(20).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(21).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(22).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(23).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(24).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(25).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(26).jpeg" width="45%" />
-</p><p align="center">
-  <img src="screenshots/screenshots(27).jpeg" width="45%" />
-</p>
+---
 
 ## 🛠️ Built With
 
- - Flutter
-
- - Dart
+- **[Flutter](https://flutter.dev/)** - UI Toolkit.
+- **[Dart](https://dart.dev/)** - Programming Language.
