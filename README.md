@@ -1,40 +1,77 @@
-# 🟢 GreenMart App
+# GreenMart — Complete Grocery App UI in Flutter
 
-Welcome to **GreenMart**, a fresh and innovative grocery application built with Flutter!
-
-## ✨ Features
-- **Seamless Authentication**: Login, Sign Up, and OTP Phone Verification flows.
-- **Beautiful UI**: An immersive and clean design to provide an excellent user experience.
-- **Smooth Navigation**: Easy browsing from the Welcome screen to shopping pages.
+> A full, production-ready Flutter UI for a grocery shopping app — from onboarding to checkout.  
+> **UI only. Clean code. Ready to connect to any backend or API.**
 
 ---
 
-## 📱 App Screenshots
+## What's inside
 
-### 🚀 Onboarding & Authentication
+This is not a demo. GreenMart covers every screen a real grocery app needs:
 
-| Splash Screen | Welcome Screen | Login |
-|:---:|:---:|:---:|
-| <img src="screenshots/SplashScreen.jpeg" width="250" /> | <img src="screenshots/WelcomeScreen.jpeg" width="250" /> | <img src="screenshots/login.jpeg" width="250" /> |
+| Flow | Screens |
+|---|---|
+| Onboarding & Auth | Splash, Welcome, Login, Sign Up, Phone & OTP Verification |
+| Shopping | Home, Categories, Product Listing, Product Detail |
+| Categories | Fruits & Vegetables, Dairy & Eggs, Meat & Fish, Bakery, Beverages, Cooking Oil |
+| Purchase | Cart, Checkout, Order Confirmed |
+| User | Profile, Favorites, Search |
 
-| Sign Up | Phone Verification | OTP Verification |
-|:---:|:---:|:---:|
-| <img src="screenshots/signup.jpeg" width="250" /> | <img src="screenshots/PhoneVerificationScreen.jpeg" width="250" /> | <img src="screenshots/OTPVerificationScreen.jpeg" width="250" /> |
-
-### 🛍️ App Walkthrough
-
-| | | |
-|:---:|:---:|:---:|
-| <img src="screenshots/screenshots(11).jpeg" width="250" /> | <img src="screenshots/screenshots(12).jpeg" width="250" /> | <img src="screenshots/screenshots(13).jpeg" width="250" /> |
-| <img src="screenshots/screenshots(14).jpeg" width="250" /> | <img src="screenshots/screenshots(15).jpeg" width="250" /> | <img src="screenshots/screenshots(16).jpeg" width="250" /> |
-| <img src="screenshots/screenshots(17).jpeg" width="250" /> | <img src="screenshots/screenshots(18).jpeg" width="250" /> | <img src="screenshots/screenshots(19).jpeg" width="250" /> |
-| <img src="screenshots/screenshots(20).jpeg" width="250" /> | <img src="screenshots/screenshots(21).jpeg" width="250" /> | <img src="screenshots/screenshots(22).jpeg" width="250" /> |
-| <img src="screenshots/screenshots(23).jpeg" width="250" /> | <img src="screenshots/screenshots(24).jpeg" width="250" /> | <img src="screenshots/screenshots(25).jpeg" width="250" /> |
-| <img src="screenshots/screenshots(26).jpeg" width="250" /> | <img src="screenshots/screenshots(27).jpeg" width="250" /> | |
+**17+ screens. Zero backend required.**
 
 ---
 
-## 🛠️ Built With
+## Screenshots
 
-- **[Flutter](https://flutter.dev/)** - UI Toolkit.
-- **[Dart](https://dart.dev/)** - Programming Language.
+### Onboarding & Authentication
+
+| Splash | Welcome | Login |
+|:---:|:---:|:---:|
+| <img src="screenshots/splash_screen.jpeg" width="220"/> | <img src="screenshots/welcome_screen.jpeg" width="220"/> | <img src="screenshots/login.jpeg" width="220"/> |
+
+| Sign Up | Phone Verification | OTP |
+|:---:|:---:|:---:|
+| <img src="screenshots/signup.jpeg" width="220"/> | <img src="screenshots/phone_verification_screen.jpeg" width="220"/> | <img src="screenshots/otp_verification_screen.jpeg" width="220"/> |
+
+### Shopping Experience
+
+| Home | Categories | Search |
+|:---:|:---:|:---:|
+| <img src="screenshots/home_shop.jpeg" width="220"/> | <img src="screenshots/fresh_fruits_vegetables.jpeg" width="220"/> | <img src="screenshots/find_products.jpeg" width="220"/> |
+
+| Product Detail | Product Detail | Best Selling |
+|:---:|:---:|:---:|
+| <img src="screenshots/carrots_product_detail.jpeg" width="220"/> | <img src="screenshots/broccoli_product_detail.jpeg" width="220"/> | <img src="screenshots/best_selling.jpeg" width="220"/> |
+
+### More Categories
+
+| Dairy & Eggs | Meat & Fish | Bakery & Snacks |
+|:---:|:---:|:---:|
+| <img src="screenshots/dairy_eggs.jpeg" width="220"/> | <img src="screenshots/meat_fish.jpeg" width="220"/> | <img src="screenshots/bakery_snacks.jpeg" width="220"/> |
+
+| Beverages | Cooking Oil | Exclusive Offers |
+|:---:|:---:|:---:|
+| <img src="screenshots/beverages.jpeg" width="220"/> | <img src="screenshots/cooking_oil_ghee.jpeg" width="220"/> | <img src="screenshots/exclusive_offers.jpeg" width="220"/> |
+
+### Cart & Checkout
+
+| Cart | Checkout | Order Confirmed |
+|:---:|:---:|:---:|
+| <img src="screenshots/cart.jpeg" width="220"/> | <img src="screenshots/checkout.jpeg" width="220"/> | <img src="screenshots/order_accepted.jpeg" width="220"/> |
+
+### User
+
+| Profile | Favorites |
+|:---:|:---:|
+| <img src="screenshots/account_profile.jpeg" width="220"/> | <img src="screenshots/favorites.jpeg" width="220"/> |
+
+---
+
+## Tech stack
+
+| | |
+|---|---|
+| Framework | Flutter 3.x |
+| Language | Dart |
+| State management | Ready for Provider / Riverpod / Bloc |
+| Backend | UI only — connect any REST API or Firebase |
