@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/styles/colors.dart';
-import 'package:green_mart/features/main_layout/views/explore/bakery_screen.dart';
-import 'package:green_mart/features/main_layout/views/explore/beverages_screen.dart';
-import 'package:green_mart/features/main_layout/views/explore/dairy_screen.dart';
-import 'package:green_mart/features/main_layout/views/explore/greenly_screen.dart';
-import 'package:green_mart/features/main_layout/views/explore/meat_screen.dart';
-import 'package:green_mart/features/main_layout/views/explore/oil_screen.dart';
+import 'package:green_mart/features/explore/bakery_screen.dart';
+import 'package:green_mart/features/explore/beverages_screen.dart';
+import 'package:green_mart/features/explore/dairy_screen.dart';
+import 'package:green_mart/features/explore/greenly_screen.dart';
+import 'package:green_mart/features/explore/meat_screen.dart';
+import 'package:green_mart/features/explore/oil_screen.dart';
 
 class ProductModel {
   final String id;

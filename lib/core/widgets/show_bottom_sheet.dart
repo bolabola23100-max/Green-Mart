@@ -7,7 +7,7 @@ import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/styles/colors.dart';
 import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
-import 'package:green_mart/features/main_layout/views/orderAccepted.dart';
+import 'package:green_mart/features/cart/orderAccepted.dart';
 
 ShowBottomSheet(BuildContext context) {
   return showBottomSheet(

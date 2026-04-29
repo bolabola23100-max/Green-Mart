@@ -4,7 +4,7 @@ import 'package:green_mart/core/constants/app_Images.dart';
 import 'package:green_mart/core/functions/Navigations.dart';
 import 'package:green_mart/core/styles/colors.dart';
 import 'package:green_mart/core/widgets/inputs/main_button.dart';
-import 'package:green_mart/features/auth/screens/login_screen.dart';
+import 'package:green_mart/features/auth/presentation/screens/authentication/login_screen.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
